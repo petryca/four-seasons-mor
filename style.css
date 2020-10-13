@@ -25,14 +25,78 @@ html {
 body {
     margin: 0;
     font-family: Ubuntu, sans-serif;
+    color: #FFF;
 }
 
 header {
     height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
     text-align: center;
+    margin: 4rem 0 0 0;
+    font-size: 2.8rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #999;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+#orbit {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    animation: orbit 24s linear infinite;
+}
+
+#sun {
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    width: 60px;
+    height: 60px;
+    background-color: #FC0;
+    border-radius: 50%;
+}
+
+#earth {
+    position: absolute;
+    top: 164px;
+    left: 16px;
+    width: 28px;
+    height: 28px;
+    background-color: #00BAFF;
+    border-radius: 50%;
+    animation: orbit 2s linear infinite;
+}
+
+#moon {
+    position: absolute;
+    left: 8px;
+    top: -28px;
+    width: 12px;
+    height: 12px;
+    background-color: #999;
+    border-radius: 50%;
+}
+
+@keyframes orbit {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 section {
@@ -41,6 +105,10 @@ section {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #spring {
@@ -57,6 +125,26 @@ section {
 
 #winter {
     background-image: url(media/winter.jpg);
+}
+
+article {
+    background-color: rgba(0,0,0,0.5);
+    max-width: 800px;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: rgba(255,255,255,0.5);
+}
+
+p {
+    margin: 0;
 }
 
 
